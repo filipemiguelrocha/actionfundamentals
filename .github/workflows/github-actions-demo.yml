@@ -14,8 +14,9 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - name: Outputs
       - run: |
-          echo "Event that triggered the workflow: $ github.event_name }}"
+          echo "Event that triggered the workflow: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
           echo "Repository: ${{ github.repository }}"
       - uses: actions/checkout@v3
